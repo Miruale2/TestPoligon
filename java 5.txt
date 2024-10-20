@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int n1 = scanner.nextInt();
+        int goda = scanner.nextInt();
+        if (n1 == 1 || n1 == 2) {
+            n1+=12;
+            goda--;
+        }
+        // формула Зеллерa(этот коментарий и код я пишу всмысле человек)
+        int n3 = goda%100;
+        int n2 = goda/100;
+        int dni = (n+(13*(n1+1))/5+n3+n3/4+n2/4-2*n2)%7; 
+        switch (dni)
+        {
+            case 0:
+                System.out.println("Saturday");
+                break;
+            case 1:
+                System.out.println("Sunday");
+                break;
+            case 2:
+                System.out.println("Monday");
+                break;
+            case 3:
+                System.out.println("Tuesday");
+                break;
+            case 4:
+                System.out.println("Wednesday");
+                break;
+            case 5:
+                System.out.println("Thursday");
+                break;
+            case 6:
+                System.out.println("Friday");
+                break;
+        }
+    }
+}
