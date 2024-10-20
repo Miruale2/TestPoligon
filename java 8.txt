@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void function(int n, char a, char b, char c) 
+    {
+        if (n == 1) 
+        {
+            System.out.println("Move disk 1 from " + a + " to " + b);
+            return;
+        }
+        function(n - 1, a, c, b);
+        System.out.println("Move disk " + n + " from " + a + " to " + b);
+        function(n - 1, c, b, a);
+    }
+    public static void main(String[] args) 
+    {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        function(n, 'A', 'C', 'B');
+    }
+}
