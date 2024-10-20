@@ -1,0 +1,22 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String st1 = scanner.nextLine().trim();
+        String st2 = scanner.nextLine().trim();
+        char[] a = st1.toCharArray();
+        char[] a2 = st2.toCharArray();
+        Arrays.sort(a);
+        Arrays.sort(a2);
+        if (Arrays.equals(a, a2)) 
+        {
+            System.out.println("Yes");
+        }
+        else {
+            System.out.println("No");
+        }
+    }
+}
